@@ -1,6 +1,7 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
-import { Home } from './pages/home';
-import { Works } from './pages/works';
+import { Home } from './pages/Home';
+import { Works } from './pages/Works';
+import { Button } from '@mui/material';
 
 function App() {
   return (
@@ -8,13 +9,18 @@ function App() {
       <nav>
         <ul>
           <li>
-            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/'>
+              <Button variant='outlined'>Home</Button>
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/works'>Works</NavLink>
+            <NavLink to='/works'>
+              <Button variant='outlined'>Works</Button>
+            </NavLink>
           </li>
         </ul>
       </nav>
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='works' element={<Works />} />
